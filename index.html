@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+    <link rel="stylesheet/less" href="assets/styles/main.css"/>
+
+</head>
+
+<!-- Declare the app -->
+<body ng-app="SampleMVCApp">
+<div class="container main-container">
+
+    <h2>MVC Sample for Angular Datatable </h2>
+    <div ng-view="" class="webui-container">
+        <!-- The views is filled via routes -->
+    </div>
+
+</div>
+
+
+<!-- Scripts wired in Angular, DataTable -->
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/jquery.dataTables.min.js"></script>
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular-route/angular-route.min.js"></script>
+<script src="lib/angular-datatable/angular-datatables.min.js"></script>
+
+<!-- Angular App, Controller and any other script wired here -->
+<script src="app.js"></script>
+
+<!-- Add services here -->
+<script src="features/users/UserDetailService.js"></script>
+
+<!-- Add controllers here -->
+<script src="features/users/UserDetailController.js"></script>
+
+</body>
+</html>

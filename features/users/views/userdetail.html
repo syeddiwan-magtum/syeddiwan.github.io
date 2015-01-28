@@ -1,0 +1,20 @@
+<div ng-controller="UserDetailController">
+    <h2>User Details</h2>
+   <!-- <table datatable="" dt-options="userDetail.dtOptions" dt-columns="userDetail.dtColumns" class="row-border hover"></table>-->
+    <table datatable="ng" class="row-border hover">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="user in :: users">
+            <td>{{ user.id }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.lastName }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
