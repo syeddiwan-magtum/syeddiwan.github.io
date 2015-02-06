@@ -1,20 +1,26 @@
-<div ng-controller="UserDetailController">
+<div class="preview" ng-controller="UserDetailController">
     <h2>User Details</h2>
-   <!-- <table datatable="" dt-options="userDetail.dtOptions" dt-columns="userDetail.dtColumns" class="row-border hover"></table>-->
-    <table datatable="ng" class="row-border hover">
+
+    <table id="table2" datatable="ng" dt-options="userDTOptions" dt-columns="userDTColumnDefs" class="row-border hover">
         <thead>
-        <tr>
-            <th>ID</th>
-            <th>FirstName</th>
-            <th>LastName</th>
-        </tr>
+            <tr>
+                <th>ID</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th></th>
+
+            </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="user in :: users">
+        <tr ng-repeat="user in users">
             <td>{{ user.id }}</td>
             <td>{{ user.firstName }}</td>
             <td>{{ user.lastName }}</td>
+            <td>
+                <button type="button" ng-click="deleteUser($index)" class="btn btn-danger"><i class="fa fa-trash-o"></i></button>
+            </td>
         </tr>
         </tbody>
+
     </table>
 </div>

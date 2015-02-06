@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('SampleMVCApp', ['ngRoute'
+var app = angular.module('SampleMVCApp', ['datatables','ngRoute','datatables.colvis'
 
 ]).config(function ($routeProvider) {
     $routeProvider
